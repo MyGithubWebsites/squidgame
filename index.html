@@ -114,5 +114,30 @@
 <!-- partial -->
   <script  src="./script.js"></script>
 
+
+
+
+
+
+  
+<script>
+  // Initialize Telegram Web App
+  const tg = Telegram.WebApp;
+
+  // Notify Telegram that the app is ready
+  tg.ready();
+
+  // Example: Close the Web App when a button is clicked
+  document.getElementById("closeButton").addEventListener("click", () => {
+    tg.close();
+  });
+</script>
+
+  
+
+
+
+
+  
 </body>
 </html>
