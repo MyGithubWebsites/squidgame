@@ -1,0 +1,837 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+section, article, button,
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  text-align: initial;
+}
+
+a {
+  text-decoration: none;
+  text-transform: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  min-height: 100vh;
+  background: #e9565c;
+  padding: 60px 0;
+  position: relative;
+}
+
+#squid-game--doll {
+  position: relative;
+  margin-bottom: 162px;
+  transform: scale(0.5);
+}
+@media (min-width: 768px) {
+  #squid-game--doll {
+    transform: scale(1);
+  }
+}
+#squid-game--doll .head {
+  background-color: #121212;
+  border-radius: 50%;
+  width: 320px;
+  height: 353px;
+  position: relative;
+}
+#squid-game--doll .head::after {
+  content: "";
+  position: absolute;
+  top: 88px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%/42%;
+  width: 270px;
+  height: 272px;
+  background-color: #ffe2ba;
+  z-index: 2;
+}
+#squid-game--doll .head::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  width: 160px;
+  height: 100px;
+  background-color: #121212;
+}
+#squid-game--doll .eyes {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  height: 30px;
+}
+#squid-game--doll .eyes .eyebrows {
+  border: 4px solid #000;
+  display: inline-block;
+  min-width: 67px;
+  min-height: 43px;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: -1px;
+}
+#squid-game--doll .eyes .eyebrows--1 {
+  left: -17px;
+  transform: rotate(3deg);
+}
+#squid-game--doll .eyes .eyebrows--2 {
+  left: 97px;
+  transform: rotate(-4deg);
+}
+#squid-game--doll .eyes .eyes-shape {
+  background-color: #121212;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+}
+#squid-game--doll .eyes .eyes-shape::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 8px;
+  transform: translate(0, -50%);
+  z-index: 1;
+  background-color: #ffe2ba;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+#squid-game--doll .eyes .eyes-shape::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  border-radius: 50%;
+  border: 3px solid #c94b25;
+  opacity: 0;
+}
+#squid-game--doll .cheeks {
+  position: absolute;
+  top: 237px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  width: 68%;
+  height: 30px;
+}
+#squid-game--doll .cheeks::after, #squid-game--doll .cheeks::before {
+  content: "";
+  background-color: #e9565c;
+  height: 40px;
+  width: 50px;
+  border-radius: 50%;
+}
+#squid-game--doll .nose,
+#squid-game--doll .nose::after,
+#squid-game--doll .nose::before {
+  content: "";
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  min-width: 16px;
+  min-height: 16px;
+  border-radius: 50%;
+}
+#squid-game--doll .nose {
+  position: absolute;
+  top: 225px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 3;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+}
+#squid-game--doll .nose::after {
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  margin-bottom: 0;
+}
+#squid-game--doll .nose::before {
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  margin-right: -2px;
+  margin-bottom: 0;
+}
+#squid-game--doll .mouth {
+  background-color: #c94b25;
+  width: 60px;
+  height: 25px;
+  position: absolute;
+  top: 286px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 3;
+  border-radius: 40% 40% 50% 50%/40% 40% 60% 60%;
+}
+#squid-game--doll .chin {
+  position: absolute;
+  top: 338px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 70px;
+  height: 30px;
+  border-radius: 0 0 50% 50%/0 0 60% 60%;
+  background-color: #ffe2ba;
+  z-index: 3;
+}
+#squid-game--doll .chin .chin-shadow {
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  min-width: 40px;
+  min-height: 18px;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  transform: rotate(4deg);
+}
+#squid-game--doll .ears {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#squid-game--doll .ears::after, #squid-game--doll .ears::before {
+  content: "";
+  background-color: #ffe2ba;
+  width: 40px;
+  height: 65px;
+}
+#squid-game--doll .ears::after {
+  border-radius: 46% 40% 50% 50%/26% 50%;
+  transform: rotate(18deg);
+}
+#squid-game--doll .ears::before {
+  border-radius: 50% 50% 46% 40%/50% 26%;
+  transform: rotate(-18deg);
+}
+#squid-game--doll .braids {
+  position: absolute;
+  top: 226px;
+  left: 48%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#squid-game--doll .braids .braid-1,
+#squid-game--doll .braids .braid-2 {
+  width: 100px;
+  height: 54px;
+  transform: rotate(-57deg);
+  border-radius: 25%;
+  background-color: #121212;
+}
+#squid-game--doll .braids .braid-1 .detail-1,
+#squid-game--doll .braids .braid-2 .detail-1 {
+  position: absolute;
+  top: -4px;
+  left: -8px;
+}
+#squid-game--doll .braids .braid-1 .detail-1::after, #squid-game--doll .braids .braid-1 .detail-1::before,
+#squid-game--doll .braids .braid-2 .detail-1::after,
+#squid-game--doll .braids .braid-2 .detail-1::before {
+  content: "";
+}
+#squid-game--doll .braids .braid-1 .detail-1::after,
+#squid-game--doll .braids .braid-2 .detail-1::after {
+  top: 16px;
+  left: -3px;
+}
+#squid-game--doll .braids .braid-1 .detail-1::before,
+#squid-game--doll .braids .braid-2 .detail-1::before {
+  top: 32px;
+  left: -4px;
+}
+#squid-game--doll .braids .braid-1 .detail-1,
+#squid-game--doll .braids .braid-1 .detail-1::after,
+#squid-game--doll .braids .braid-1 .detail-1::before,
+#squid-game--doll .braids .braid-2 .detail-1,
+#squid-game--doll .braids .braid-2 .detail-1::after,
+#squid-game--doll .braids .braid-2 .detail-1::before {
+  border-radius: 50%;
+  background-color: #9a0cad;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+#squid-game--doll .braids .braid-1 .detail-2,
+#squid-game--doll .braids .braid-2 .detail-2 {
+  background-color: #121212;
+  width: 70px;
+  height: 40px;
+  border-radius: 50%/60% 60% 40% 40%;
+  position: absolute;
+  top: -3px;
+  left: -51px;
+  transform: rotate(33deg);
+  z-index: -1;
+}
+#squid-game--doll .braids .braid-1 .detail-2::before, #squid-game--doll .braids .braid-1 .detail-2::after,
+#squid-game--doll .braids .braid-2 .detail-2::before,
+#squid-game--doll .braids .braid-2 .detail-2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #121212;
+}
+#squid-game--doll .braids .braid-1 .detail-2::before,
+#squid-game--doll .braids .braid-2 .detail-2::before {
+  top: 14px;
+  left: -8px;
+  transform: rotate(-24deg);
+}
+#squid-game--doll .braids .braid-1 .detail-2::after,
+#squid-game--doll .braids .braid-2 .detail-2::after {
+  top: 17px;
+  left: -8px;
+  height: 30px;
+  transform: rotate(-50deg);
+}
+#squid-game--doll .braids .braid-1 .detail-2 span,
+#squid-game--doll .braids .braid-2 .detail-2 span {
+  position: absolute;
+  top: 30px;
+  border-radius: 50%;
+  background-color: #121212;
+  width: 60px;
+  height: 20px;
+}
+#squid-game--doll .braids .braid-1 .detail-2 span:nth-child(1),
+#squid-game--doll .braids .braid-2 .detail-2 span:nth-child(1) {
+  left: 6px;
+  transform: rotate(-43deg);
+}
+#squid-game--doll .braids .braid-1 .detail-2 span:nth-child(2),
+#squid-game--doll .braids .braid-2 .detail-2 span:nth-child(2) {
+  left: 16px;
+  transform: rotate(-52deg);
+}
+#squid-game--doll .braids .braid-2 {
+  transform: rotate(-124deg) scaleY(-1);
+  margin: 14px -10px 0 0;
+}
+#squid-game--doll .body .neck {
+  width: 75px;
+  height: 75px;
+  margin: -8px auto 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #ffe2ba;
+  border-radius: 0 0 45% 45%/0 0 30% 30%;
+}
+#squid-game--doll .body .neck::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -18px;
+  transform: rotate(-20deg);
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 112px;
+  height: 62px;
+  border-radius: 50%;
+}
+#squid-game--doll .body .clothes {
+  background-color: #f4dc00;
+  width: 218px;
+  height: 136px;
+  border-radius: 50%;
+  position: absolute;
+  top: 388px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
+#squid-game--doll .body .clothes::after, #squid-game--doll .body .clothes::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -36px;
+  border-radius: 50%;
+  width: 87px;
+  height: 90px;
+}
+#squid-game--doll .body .clothes::after {
+  left: 28px;
+}
+#squid-game--doll .body .clothes::before {
+  right: 28px;
+}
+#squid-game--doll .body .clothes div {
+  background-color: #e96800;
+  position: absolute;
+  top: 6px;
+  z-index: 2;
+  width: 25px;
+  height: 87px;
+}
+#squid-game--doll .body .clothes div:nth-child(1) {
+  left: 28px;
+  transform: rotate(-3deg);
+}
+#squid-game--doll .body .clothes div:nth-child(2) {
+  right: 28px;
+  transform: rotate(3deg);
+}
+#squid-game--doll .body .clothes-details--1 {
+  background-color: #e96800;
+  width: 200px;
+  height: 126px;
+  border-radius: 40% 40% 50% 50%/60% 60% 60% 60%;
+  position: absolute;
+  top: 455px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#squid-game--doll .body .clothes-details--1::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  background-color: #f4dc00;
+  width: 148px;
+  height: 50px;
+}
+#squid-game--doll .body .clothes-details--1 div {
+  background-color: #e96800;
+  position: absolute;
+  top: -55px;
+  z-index: 1;
+  width: 25px;
+  height: 99px;
+}
+#squid-game--doll .body .clothes-details--1 div:nth-child(1) {
+  left: 20px;
+  transform: rotate(-4deg);
+}
+#squid-game--doll .body .clothes-details--1 div:nth-child(2) {
+  right: 20px;
+  transform: rotate(4deg);
+}
+#squid-game--doll .body .clothes-details--1 span {
+  background-color: #f4dc00;
+  width: 74px;
+  height: 140px;
+  border-radius: 100% 20% 50% 50%/50% 20% 20% 10%;
+  position: absolute;
+  top: -63px;
+}
+#squid-game--doll .body .clothes-details--1 span:nth-child(3) {
+  left: -59px;
+  transform: rotate(20deg);
+}
+#squid-game--doll .body .clothes-details--1 span:nth-child(4) {
+  right: -59px;
+  transform: rotate(-20deg) scaleX(-1);
+}
+
+#squid-game--doll.active-eyes .eyes-shape--1 {
+  animation: eye-left 3.7s linear 7.5s alternate;
+}
+#squid-game--doll.active-eyes .eyes-shape--2 {
+  animation: eye-right 3.7s linear 7.5s alternate;
+}
+@keyframes eye-left {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(11px, 5px);
+  }
+  50% {
+    transform: translate(-11px, 3px);
+  }
+  75% {
+    transform: translate(3px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes eye-right {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-11px, 2px);
+  }
+  50% {
+    transform: translate(11px, 5px);
+  }
+  75% {
+    transform: translate(6px, 2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes eye-active {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#squid-game--doll.active-eyes .eyes .eyes-shape::before {
+  animation: eye-active 4s linear 7s alternate;
+}
+
+.squid-game--minion {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.squid-game--minion .head {
+  background-color: #c44568;
+  border-radius: 50%;
+  border: 3px solid #000;
+  width: 220px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.squid-game--minion .head .mask-border {
+  background-color: #323230;
+  border-radius: 50%;
+  border: 3px solid #000;
+  width: 170px;
+  height: 222px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.squid-game--minion .head .mask,
+.squid-game--minion .head .mask::after,
+.squid-game--minion .head .mask::before {
+  background-color: #323230;
+  background-image: radial-gradient(#21212194 20%, transparent 8%);
+  background-size: 20px 18px;
+}
+.squid-game--minion .head .mask {
+  width: 100%;
+  height: 100%;
+}
+.squid-game--minion .head .mask::after {
+  content: "";
+  width: 100%;
+  height: 130px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 3px solid #000;
+  border-top-color: transparent;
+}
+.squid-game--minion .head .mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -14px;
+  width: 90px;
+  height: 100%;
+  border: 4px solid #000;
+  border-radius: 40%;
+  background-position: 35px 14px;
+}
+.squid-game--minion .head .mask-details::after, .squid-game--minion .head .mask-details::before {
+  content: "";
+  background-color: #c44568;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: -14px;
+}
+.squid-game--minion .head .mask-details::before {
+  left: 56px;
+}
+.squid-game--minion .head .mask-details::after {
+  right: 46px;
+  bottom: -9px;
+}
+.squid-game--minion .body {
+  width: 195px;
+  height: 300px;
+  position: relative;
+}
+.squid-game--minion .body::after {
+  content: "";
+  width: 195px;
+  height: 264px;
+  position: absolute;
+  z-index: 0;
+  background-color: #c44568;
+  border-radius: 45% 45% 0 0;
+  margin-top: -53px;
+  border: 3px solid #000;
+}
+.squid-game--minion .body::before {
+  content: "";
+  height: 10px;
+  width: 200px;
+  position: absolute;
+  top: 138px;
+  left: 51.4%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+  border: 3px solid #000;
+  border-radius: 10px;
+  background-color: #323230;
+}
+.squid-game--minion .body .zipper {
+  position: absolute;
+  top: -84px;
+  left: 52%;
+  z-index: 2;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  width: 3px;
+  height: 270px;
+  background-color: #000;
+}
+.squid-game--minion .body .zipper::after {
+  content: "";
+  border-bottom: 10px solid #000;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  width: 7px;
+  height: 0;
+  position: absolute;
+  top: 100px;
+  left: 54%;
+  transform: translate(-51%, 0);
+  border-radius: 10%;
+}
+.squid-game--minion .body .arms {
+  background-color: #c44568;
+  position: absolute;
+  top: -39px;
+  width: 100px;
+  height: 238px;
+  border: 3px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.squid-game--minion .body .arms::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  position: absolute;
+  bottom: -34px;
+}
+.squid-game--minion .body .arm-right {
+  right: -42px;
+  transform: rotate(-25deg);
+}
+.squid-game--minion .body .arm-left {
+  left: -38px;
+  transform: rotate(25deg);
+}
+.squid-game--minion .body .legs {
+  background-color: #c44568;
+  width: 96px;
+  height: 128px;
+  position: absolute;
+  bottom: -42px;
+  z-index: 1;
+  border: 3px solid #000;
+  border-radius: 0 0 50% 50%;
+}
+.squid-game--minion .body .legs::after {
+  content: "";
+  position: absolute;
+  bottom: -44px;
+  left: -19px;
+  width: 121px;
+  height: 100px;
+  border: 3px solid #000;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+.squid-game--minion .body .legs::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 90px;
+  height: 40px;
+  background-color: #c44568;
+}
+.squid-game--minion .body .legs-right {
+  right: -6px;
+}
+
+.squid-game--minion.circle-minion .figure {
+  width: 70px;
+  height: 70px;
+  border: 7px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+}
+
+.squid-game--minion:nth-child(2),
+.squid-game--minion:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(0.2) translate(-50%, -50%);
+  z-index: 0;
+  margin-top: -74px;
+}
+@media (min-width: 768px) {
+  .squid-game--minion:nth-child(2),
+.squid-game--minion:nth-child(3) {
+    top: 330px;
+    transform: scale(0.3) translate(-50%, 0);
+    margin-top: 20px;
+  }
+}
+
+.squid-game--minion:nth-child(2) {
+  margin-left: -206px;
+}
+@media (min-width: 768px) {
+  .squid-game--minion:nth-child(2) {
+    margin-left: -330px;
+  }
+}
+
+.squid-game--minion:nth-child(3) {
+  margin-left: 28px;
+}
+@media (min-width: 768px) {
+  .squid-game--minion:nth-child(3) {
+    margin-left: 170px;
+  }
+}
+
+#play-game {
+  background-color: #0b785e;
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 0px 0px 6px #000;
+  cursor: pointer;
+  margin-top: -136px;
+  transition: 0.34s all;
+}
+@media (min-width: 768px) {
+  #play-game {
+    margin-top: 40px;
+  }
+}
+#play-game::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  transition: 0.34s all;
+}
+
+#play-game.leave-game {
+  background-color: #4b0100;
+  transition: 0.34s all;
+}
+#play-game.leave-game::after, #play-game.leave-game::before {
+  content: "";
+  height: 40px;
+  width: 6px;
+  border-radius: 0;
+  border: 0;
+  background-color: #fff;
+  position: absolute;
+  transition: 0.34s all;
+}
+#play-game.leave-game::after {
+  transform: rotate(-45deg);
+}
+#play-game.leave-game::before {
+  transform: rotate(45deg);
+}
+
+h1 {
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 20px;
+}
